@@ -3,78 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Portfolio</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #4b3232;
-            padding-top: 40px;
-            height: 100vh;
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .sidebar h1 {
-            color: white;
-            font-size: 22px;
-            margin-bottom: 30px;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            margin: 15px 0;
-            font-size: 16px;
-            transition: background 0.3s, padding 0.3s;
-        }
-        .sidebar a:hover {
-            background-color: #644646;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        main {
-            margin-left: 220px;
-            padding: 40px;
-            flex-grow: 1;
-        }
-        section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .project {
-            margin: 20px 0;
-            padding: 16px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background: #fff;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #222;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-        }
-    </style>
+    <title>Swaraj Thakur | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+    <button id="scrollTopBtn" title="Go to top">&#8679;</button>
+    <button id="darkModeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+
     <div class="sidebar">
-        <h1>Portfolio</h1>
+        <h1><span id="typed-name"></span></h1>
         <a href="#about">About</a>
         <a href="#achievements">Achievements</a>
         <a href="#skills">Skills</a>
@@ -86,8 +25,13 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! 👋 I'm <strong>Swaraj Gorakshanath Thakur</strong>, a passionate and curious Computer Engineering student at MIT Academy of Engineering.</p>
-            <p>I enjoy learning about programming, building projects that solve real-world problems, and exploring new tools and technologies. Whether it's front-end development or diving into C++ code, I love understanding how things work.</p>
+            <img src="profile.jpg" alt="Swaraj Thakur" class="profile-pic">
+            <p style="text-align:center;">
+                Hello! 👋 I'm <strong>Swaraj Gorakshanath Thakur</strong>, a passionate and curious Computer Engineering student at MIT Academy of Engineering.
+            </p>
+            <p style="text-align:center;">
+                I enjoy learning about programming, building projects that solve real-world problems, and exploring new tools and technologies.
+            </p>
         </section>
 
         <section id="achievements">
@@ -115,37 +59,29 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Project 1: Portfolio Website</h3>
+                <h3>Portfolio Website</h3>
                 <p>Created a personal portfolio website using HTML, CSS.</p>
             </div>
             <div class="project">
-                <h3>Project 2: Calculator App</h3>
+                <h3>Calculator App</h3>
                 <p>Developed a basic calculator using HTML, CSS, and JavaScript for performing arithmetic operations.</p>
             </div>
             <div class="project">
-                <h3>Project 3: Student Database System</h3>
+                <h3>Student Database System</h3>
                 <p>Built a simple student information system using C++ with features like adding, deleting, and displaying records.</p>
+            </div>
+            <div class="project">
+                <h3>Load Balancing Using AWS</h3>
+                <p>Implemented load balancing for scalable applications using AWS services like EC2, ELB, and Auto Scaling Groups.</p>
             </div>
         </section>
 
         <section id="certificates">
             <h2>Certificates</h2>
             <ul>
-                <li>
-                    <a href="https://drive.google.com/file/d/1N7VLfQBNcgam6k4_FHaBI2En9U1WA5_3/view?usp=sharing" target="_blank">
-                        Introduction to Kali Linux Basics 
-                    </a>
-                </li>
-                <li>
-                    <a href="https://drive.google.com/file/d/19b2IdKy9X6Xq6P_2yD2MrvpztIP0aSn_/view?usp=sharing" target="_blank">
-                        Python Essentials 1 - Cisco Networking Academy 
-                    </a>
-                </li>
-                <li>
-                    <a href= "https://drive.google.com/file/d/1zq6QxtvvrqVYOSxAQJKfN5i0kKYmN_oo/view?usp=sharing" target="_blank">
-                        Python Essentials 2 - Cisco Networking Academy 
-                    </a>
-                </li>
+                <li><a href="https://drive.google.com/file/d/1N7VLfQBNcgam6k4_FHaBI2En9U1WA5_3/view?usp=sharing" target="_blank">Introduction to Kali Linux Basics</a></li>
+                <li><a href="https://drive.google.com/file/d/19b2IdKy9X6Xq6P_2yD2MrvpztIP0aSn_/view?usp=sharing" target="_blank">Python Essentials 1 - Cisco Networking Academy</a></li>
+                <li><a href="https://drive.google.com/file/d/1zq6QxtvvrqVYOSxAQJKfN5i0kKYmN_oo/view?usp=sharing" target="_blank">Python Essentials 2 - Cisco Networking Academy</a></li>
             </ul>
         </section>
 
@@ -153,7 +89,15 @@
             <h2>Contact</h2>
             <p>Email: Swarajthakur101@gmail.com</p>
             <p>College Email: 202401040277@mitaoe.ac.in</p>
-            <p>Mobile no : 7972623504</p>
+            <p>Mobile: 7972623504</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/your-instagram-username" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
         </section>
 
         <footer>
@@ -161,6 +105,29 @@
         </footer>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Typed animation
+        var typed = new Typed("#typed-name", {
+            strings: ["Swaraj's Portfolio"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = () => {
+            scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+        };
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Dark mode
+        const toggleBtn = document.getElementById("darkModeToggle");
+        toggleBtn.onclick = () => {
+            document.body.classList.toggle("dark-mode");
+            toggleBtn.innerHTML = document.body.classList.contains("dark-mode") ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        };
+    </script>
 </body>
 </html>
-
