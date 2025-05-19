@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaraj Thakur | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <button id="scrollTopBtn" title="Go to top">&#8679;</button>
+    <button id="darkModeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+
+    <div class="sidebar">
+        <h1><span id="typed-name"></span></h1>
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="profile.jpg" alt="Swaraj Thakur" class="profile-pic">
+            <p style="text-align:center;">
+                Hello! 👋 I'm <strong>Swaraj Gorakshanath Thakur</strong>, a passionate and curious Computer Engineering student at MIT Academy of Engineering.
+            </p>
+            <p style="text-align:center;">
+                I enjoy learning about programming, building projects that solve real-world problems, and exploring new tools and technologies.
+            </p>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Scored 93.60% in SSC Examination</li>
+                <li>Scored 88.67% in HSC Examination</li>
+                <li>Qualified for JEE Advanced</li>
+                <li>Achieved 92.77 percentile in MHT-CET</li>
+                <li>Currently pursuing Computer Engineering at MIT AOE</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, C, C++, Java</li>
+                <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Tools & Platforms:</strong> Git, GitHub, Linux, VS Code</li>
+                <li><strong>Problem Solving:</strong> Strong foundation in Data Structures and Algorithms</li>
+                <li><strong>Soft Skills:</strong> Teamwork, Communication, Time Management</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Created a personal portfolio website using HTML, CSS.</p>
+            </div>
+            <div class="project">
+                <h3>Calculator App</h3>
+                <p>Developed a basic calculator using HTML, CSS, and JavaScript for performing arithmetic operations.</p>
+            </div>
+            <div class="project">
+                <h3>Student Database System</h3>
+                <p>Built a simple student information system using C++ with features like adding, deleting, and displaying records.</p>
+            </div>
+            <div class="project">
+                <h3>Load Balancing Using AWS</h3>
+                <p>Implemented load balancing for scalable applications using AWS services like EC2, ELB, and Auto Scaling Groups.</p>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1N7VLfQBNcgam6k4_FHaBI2En9U1WA5_3/view?usp=sharing" target="_blank">Introduction to Kali Linux Basics</a></li>
+                <li><a href="https://drive.google.com/file/d/19b2IdKy9X6Xq6P_2yD2MrvpztIP0aSn_/view?usp=sharing" target="_blank">Python Essentials 1 - Cisco Networking Academy</a></li>
+                <li><a href="https://drive.google.com/file/d/1zq6QxtvvrqVYOSxAQJKfN5i0kKYmN_oo/view?usp=sharing" target="_blank">Python Essentials 2 - Cisco Networking Academy</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: Swarajthakur101@gmail.com</p>
+            <p>College Email: 202401040277@mitaoe.ac.in</p>
+            <p>Mobile: 7972623504</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/your-instagram-username" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>THANK YOU FOR VISIT...</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Typed animation
+        var typed = new Typed("#typed-name", {
+            strings: ["Swaraj's Portfolio"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = () => {
+            scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+        };
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Dark mode
+        const toggleBtn = document.getElementById("darkModeToggle");
+        toggleBtn.onclick = () => {
+            document.body.classList.toggle("dark-mode");
+            toggleBtn.innerHTML = document.body.classList.contains("dark-mode") ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        };
+    </script>
+</body>
+</html>
